@@ -20,6 +20,22 @@ with open(csvpath, newline='') as csvfile:
         profit_loss.append(int(row[1]))
         total_profit_loss=int(sum(profit_loss))
 
-    print(total_profit_loss)
-    print(monthcount)
+    #print(total_profit_loss)
+    #print(monthcount)
     
+#average of profit/loss
+
+#greatest increase in profit/loss
+#greatest decrease in profit/loss
+
+print("Financial Analysis")
+print("*********************")
+print("Total Months:"+str(monthcount))
+print("Total: $"+str(total_profit_loss))
+print("Avergage Change: $")
+print("Greatest Increase in Profits: $")
+print("Greatest Decrease in Profits: $")
+
+
+
+

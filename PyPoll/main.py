@@ -22,7 +22,18 @@ with open(csvpath, newline='') as csvfile:
     #assign of data 
     votes +=1
     
-    
+    print("Election Results")
+    print("******************")
+    print("Total Votes:")
+    print("*******************")
+    print("Khan:")
+    print("Correy:")
+    print("Li:")
+    print("O'Tooley:")
+    print("********************")
+    print("Winner:")
+    print("********************")
+
    
     #total number of votes
     
