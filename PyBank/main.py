@@ -12,7 +12,7 @@ with open(csvpath, newline='') as csvfile:
     count=[]
     monthcount=0
     profit_loss_chg =[]
-    months=[]
+    months = []
     
 
     for row in csvreader:
@@ -27,48 +27,23 @@ with open(csvpath, newline='') as csvfile:
     for i in range(1,len(profit_loss)):
         profit_loss_chg.append(int(profit_loss[i])-int(profit_loss[i-1]))
 
-        
-    Total_Months=len(months)   
-#greatest_increase=max
-#greatest_decrease=min
-    #print(total_profit_loss)
-    #print(monthcount)
-    
 #average of profit/loss
-#from statistics import mean
-#def Average(profit_loss):
-    #return mean(profit_loss)
-#average=Average(profit_loss)
-#print(average)
+    sum_profit_loss = sum(profit_loss_chg)    
+    Average_change = round(sum_profit_loss/len(profit_loss_chg),2)   
 
-#greatest increase in profit/loss
-#need month of greatest increase 
+#greatest increase & decrease of proft/loss    
+greatest_increase=max(profit_loss_chg)
+greatest_decrease=min(profit_loss_chg)
+
 #need to find the greatest increase in proft loss and corresponding month
-#date[]
-
-#if profit_loss==max(profit_loss):
-    #max(row(greatest_increase))
-#elif profit_loss==min(profit_loss):
-    #min(row(greatest_decrease))         
-
-
-   
-    
-
-
-#min=min(total_profit_loss)
-#print(min)
-
-#greatest decrease in profit/loss
-
+date_increase = count[profit_loss_chg.index(greatest_increase)+1]
+date_decrease = count[profit_loss_chg.index(greatest_decrease)+1]
+        
 print("Financial Analysis")
 print("*********************")
 print("Total Months:"+str(monthcount))
 print("Total: $"+str(total_profit_loss))
-#print("Average Change: $" +(average))
-print("Greatest Increase in Profits: $")
-print("Greatest Decrease in Profits: $")
-
-
-
+print("Average Change: $" +str(Average_change))
+print(f"Greatest Increase in Profits: {date_increase} (${greatest_increase})")
+print(f"Greatest Decrease in Profits: {date_decrease} (${greatest_decrease})")
 
