@@ -47,3 +47,17 @@ print("Average Change: $" +str(Average_change))
 print(f"Greatest Increase in Profits: {date_increase} (${greatest_increase})")
 print(f"Greatest Decrease in Profits: {date_decrease} (${greatest_decrease})")
 
+#create path for text file
+textfile=os.path.join("Analysis","Financial.txt")
+
+#open text file
+file=open(textfile, "w")
+
+#copy/write data to create the new text file
+file.write("Financial Analysis")
+file.write("*********************")
+file.write("Total Months:"+str(monthcount))
+file.write("Total: $"+str(total_profit_loss))
+file.write("Average Change: $" +str(Average_change))
+file.write(f"Greatest Increase in Profits: {date_increase} (${greatest_increase})")
+file.write(f"Greatest Decrease in Profits: {date_decrease} (${greatest_decrease})")
