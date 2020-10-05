@@ -43,6 +43,22 @@ with open(csvpath, newline='') as csvfile:
     lpercent = round((Li / total_votes),2)
     tpercent = round((O_Tooley / total_votes),2)
     
+    #to determine winner
+    Winner = max(Khan,Correy,Li,O_Tooley)
+
+    if Winner == Khan:
+        Winner = "Khan"
+        
+    elif Winner == Correy:
+            Winner = "Correy"
+
+    elif Winner == Li:
+            Winner = "Li"
+
+    else:
+            Winner = "O_Tooley"
+
+
     print("Election Results")
     print("******************")
     print("Total Votes:"+str(total_votes))
@@ -52,7 +68,7 @@ with open(csvpath, newline='') as csvfile:
     print(f"Li : {lpercent:.2%} ({Li})")
     print(f"O_Tooley : {tpercent:.2%} ({O_Tooley})")
     print("********************")
-    print("Winner:")
+    print(f"Winner: {Winner}")                  
     print("********************")
 
    
@@ -78,6 +94,14 @@ with open(csvpath, newline='') as csvfile:
     #file("Election stats.txt", "w")
     #file.write("Election Results")
     #file.write("******************")
+    print("Total Votes:"+str(total_votes))
+    print("*******************")
+    print(f"Khan : {kpercent:.2%} ({Khan})")
+    print(f"Correy :{cpercent: 2%} ({Correy})")
+    print(f"Li : {lpercent:.2%} ({Li})")
+    print(f"O_Tooley : {tpercent:.2%} ({O_Tooley})")
+    print("********************")
+    print(f"Winner: {Winner}")                  
     #file.write("Total Votes:")
     #file.write("*******************")
     #file.write("Khan:")
