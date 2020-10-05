@@ -71,43 +71,22 @@ with open(csvpath, newline='') as csvfile:
     print(f"Winner: {Winner}")                  
     print("********************")
 
-   
-    #total number of votes
+          
+    #create a text file and path   
     
-    
-    #for row in(csvreader):
-        #votes =+1
+    newfile = os.path.join("Analysis","Election stats.txt")
+    file = open(newfile, "w")
 
-        #if candidate in candidatedict:
-            #{"Khan":votes,
-            #"Li":votes,
-            #"Correy":votes,
-            #"O_Tooley": votes}
-        
-        
-        
+    #copy or write data to new file
 
-        #total_votes.append(int(row[1]))
+    file.write("Election Results")
+    file.write("******************")
+    file.write("Total Votes:"+str(total_votes))
+    file.write("*******************")
+    file.write(f"Khan : {kpercent:.2%} ({Khan})")
+    file.write(f"Correy :{cpercent: 2%} ({Correy})")
+    file.write(f"Li : {lpercent:.2%} ({Li})")
+    file.write(f"O_Tooley : {tpercent:.2%} ({O_Tooley})")
+    file.write("********************")
+    file.write(f"Winner: {Winner}")                  
     
-    
-    #newfile = os.path.join("Resources","Election stats.txt")
-    #file("Election stats.txt", "w")
-    #file.write("Election Results")
-    #file.write("******************")
-    print("Total Votes:"+str(total_votes))
-    print("*******************")
-    print(f"Khan : {kpercent:.2%} ({Khan})")
-    print(f"Correy :{cpercent: 2%} ({Correy})")
-    print(f"Li : {lpercent:.2%} ({Li})")
-    print(f"O_Tooley : {tpercent:.2%} ({O_Tooley})")
-    print("********************")
-    print(f"Winner: {Winner}")                  
-    #file.write("Total Votes:")
-    #file.write("*******************")
-    #file.write("Khan:")
-    #file.write("Correy:")
-    #file.write("Li:")
-    #file.write("O'Tooley:")
-    #file.write("********************")
-    #file.write("Winner:")
-    #file.write("********************")
