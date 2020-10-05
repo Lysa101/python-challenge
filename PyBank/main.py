@@ -31,11 +31,11 @@ with open(csvpath, newline='') as csvfile:
     sum_profit_loss = sum(profit_loss_chg)    
     Average_change = round(sum_profit_loss/len(profit_loss_chg),2)   
 
-#greatest increase & decrease of proft/loss    
+#need to find the greatest increase in proft loss and corresponding month  
 greatest_increase=max(profit_loss_chg)
 greatest_decrease=min(profit_loss_chg)
 
-#need to find the greatest increase in proft loss and corresponding month
+
 date_increase = count[profit_loss_chg.index(greatest_increase)+1]
 date_decrease = count[profit_loss_chg.index(greatest_decrease)+1]
         
