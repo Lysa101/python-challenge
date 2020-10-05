@@ -3,16 +3,15 @@ import csv
 csvpath = os.path.join('Resources', 'election_data.csv')
 
 #assign data fields/variables/dictionary
-votes = 0
+
+total_votes = 0
 vote_percentage = []
 winner = []
 Khan = 0
 Correy =  0 
 Li = 0 
 O_Tooley = 0
-total_votes=int(votes)
     
-
 with open(csvpath, newline='') as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
@@ -20,10 +19,11 @@ with open(csvpath, newline='') as csvfile:
     csvheader=next(csvfile)
     #print(csvheader)
 
+
 #tally votes for candidates
     for candidate in csvreader:
-        total_votes=total_votes + 1
-
+       
+        total_votes = total_votes + 1
         if candidate [2] =="Khan":
             Khan = Khan + 1
 
@@ -33,7 +33,7 @@ with open(csvpath, newline='') as csvfile:
         elif candidate [2] == "Li":
             Li = Li + 1
 
-        elif candidate [2] == "O_Tooley":
+        else: 
             O_Tooley = O_Tooley + 1
 
     #calculate % of votes per candidate
@@ -73,7 +73,7 @@ with open(csvpath, newline='') as csvfile:
 
         #total_votes.append(int(row[1]))
     
-    #print(total_votes)
+    
     #newfile = os.path.join("Resources","Election stats.txt")
     #file("Election stats.txt", "w")
     #file.write("Election Results")
